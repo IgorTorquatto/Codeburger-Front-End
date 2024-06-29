@@ -1,0 +1,10 @@
+Criar:
+npx create-react-app code-burger-interface
+
+Organizar:
+
+Em 'src':
+-Criar pastas
+Container -> terá as pastas com o index.js e styles.js de cada página
+
+Configurar Eslint + Prettier
