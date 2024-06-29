@@ -5,6 +5,12 @@ Organizar:
 
 Em 'src':
 -Criar pastas
-Container -> terá as pastas com o index.js e styles.js de cada página
+1-Container ->
+terá as pastas com o index.js e styles.js de cada página
 
-Configurar Eslint + Prettier
+2-styles-> terá o arquivo de estilos globais do projeto
+Instalar "yarn add styled-components"
+
+
+Configurar Eslint + Prettier (opcional)
+
