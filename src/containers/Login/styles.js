@@ -44,6 +44,12 @@ export const RightContainer = styled.div`
         margin-bottom: 40px;
     }
 
+    form{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
     @media (max-width: 768px) {
         width: 100%;
         height: 100%;
@@ -52,12 +58,17 @@ export const RightContainer = styled.div`
             margin: 20px 0px 20px 0px;
             font-size: 2em;
         }
+
+        form{
+            width: 80%;
+            align-items:center;
+        }
     }
 
 `
 
 export const FormGroup = styled.div`
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
@@ -85,13 +96,19 @@ export const Input = styled.input`
     height: 39px;
     border-radius: 10px;
     outline: none;
-    border: none;
+    border: ${props => (props.error ? '2px solid #CC1717' : 'none')};
     box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
     font-size: 18px;
     font-weight: 300;
     line-height: 21px;
     padding: 15px;
 
+`
+
+export const Error = styled.p`
+    color: #CC1717;
+    font-size: 1.1em;
+    margin-top: 2px;
 `
     
 export const Button = styled.button`
@@ -104,9 +121,11 @@ export const Button = styled.button`
     height: 39px;
     border-radius: 15px;
     margin: 5px 0px 20px 0px;
+    align-self: center;
 
     &:hover{
         cursor: pointer;
+        opacity: 0.9;
     }
 
 `
@@ -122,9 +141,10 @@ export const LeftFooter = styled.p`
     a:hover{
         color: rgba(2, 117, 216, 0.8);
         cursor: pointer;
+    }
 
     @media (max-width: 768px) {
        
     }
-}
+
 `
