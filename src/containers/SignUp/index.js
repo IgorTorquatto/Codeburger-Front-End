@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Container,
   LeftContainer,
-  LoginImage,
+  SignUpImage,
   RightContainer,
   FormGroup,
   InputLabel,
@@ -10,10 +10,10 @@ import {
   Button,
   LeftFooter
 } from './styles';
-import LoginImg from '../../assets/9 1.svg';
+import SignUpImg from '../../assets/8 1.svg';
 import { useNavigate } from 'react-router-dom';
 
-function Login() {
+function SignUp() {
 
   const navigate = useNavigate()
 
@@ -24,17 +24,23 @@ function Login() {
     }
   }
 
-  const signUp = ()=>{
-    navigate("/signup")
+  const login = () => {
+    navigate('/login')
   }
 
   return (
     <Container>
       <LeftContainer>
-        <LoginImage src={LoginImg} alt="Login Image" />
+        <SignUpImage src={SignUpImg} alt="SignUp Image" />
       </LeftContainer>
       <RightContainer>
-        <h1>Login</h1>
+        <h1>Cadastre-se</h1>
+        <FormGroup>
+          <InputLabel htmlFor="name" onClick={() => focusInput('name')}>
+            Nome
+          </InputLabel>
+          <Input type="name" id="name" />
+        </FormGroup>
         <FormGroup>
           <InputLabel htmlFor="email" onClick={() => focusInput('email')}>
             Email
@@ -47,13 +53,19 @@ function Login() {
           </InputLabel>
           <Input type="password" id="password" />
         </FormGroup>
-        <Button>Entrar</Button>
+        <FormGroup>
+          <InputLabel htmlFor="confirmPassword" onClick={() => focusInput('confirmPassword')}>
+            Confirmar Senha
+          </InputLabel>
+          <Input type="password" id="confirmPassword" />
+        </FormGroup>
+        <Button>Cadastrar</Button>
         <LeftFooter>
-          Não possui uma conta? <a onClick={signUp}>Cadastre-se</a>
+          Já possui uma conta? <a onClick={login}>Login</a>
         </LeftFooter>
       </RightContainer>
     </Container>
   );
 }
 
-export default Login;
+export default SignUp;
