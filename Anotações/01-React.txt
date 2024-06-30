@@ -14,3 +14,4 @@ Instalar "yarn add styled-components"
 
 Configurar Eslint + Prettier (opcional)
 
+Pegar os dados do formulário com 'react hook form'
