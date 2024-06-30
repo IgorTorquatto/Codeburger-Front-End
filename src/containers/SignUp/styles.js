@@ -8,7 +8,7 @@ export const Container = styled.div`
 
     @media (max-width: 768px) {
         flex-direction: column;
-    }
+  }
 
 `
 
@@ -23,7 +23,7 @@ export const LeftContainer = styled.div`
 
 `
 
-export const LoginImage = styled.img`
+export const SignUpImage = styled.img`
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -46,8 +46,7 @@ export const RightContainer = styled.div`
 
     @media (max-width: 768px) {
         width: 100%;
-        height: 100%;
-        
+    
         h1{
             margin: 20px 0px 20px 0px;
             font-size: 2em;
