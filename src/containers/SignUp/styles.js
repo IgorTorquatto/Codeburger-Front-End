@@ -89,7 +89,6 @@ export const InputLabel = styled.p`
 
 `
  
-
 export const Input = styled.input`
     width: 100%;
     height: 39px;
@@ -101,25 +100,6 @@ export const Input = styled.input`
     font-weight: 300;
     line-height: 21px;
     padding: 15px;
-
-`
-    
-export const Button = styled.button`
-    border: none;
-    outline: none;
-    color: #ffffff;
-    font-size: 1em;
-    background-color: #9758A6;
-    width: 30%;
-    height: 39px;
-    border-radius: 15px;
-    margin: 5px 0px 20px 0px;
-    align-self: center;
-
-    &:hover{
-        cursor: pointer;
-        opacity: 0.9;
-    }
 
 `
 

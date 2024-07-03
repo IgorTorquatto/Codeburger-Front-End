@@ -7,9 +7,9 @@ import {
   FormGroup,
   InputLabel,
   Input,
-  Button,
   LeftFooter
 } from './styles';
+import Button from '../../components/Button'
 import SignUpImg from '../../assets/8 1.svg';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
@@ -64,7 +64,7 @@ function SignUp() {
             </InputLabel>
             <Input type="password" id="confirmPassword" {...register("confirmPassword")}/>
           </FormGroup>
-          <Button>Cadastrar</Button>
+          <Button type="submit" style={{marginTop: 5 , marginBottom: 20}}>Cadastrar</Button>
         </form>
         <LeftFooter>
           Já possui uma conta? <a onClick={login}>Login</a>

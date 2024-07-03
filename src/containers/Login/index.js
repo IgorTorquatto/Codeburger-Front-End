@@ -7,10 +7,10 @@ import {
   FormGroup,
   InputLabel,
   Input,
-  Button,
   LeftFooter,
   Error
 } from './styles';
+import Button from '../../components/Button'
 import LoginImg from '../../assets/9 1.svg';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
@@ -34,6 +34,8 @@ function Login() {
         email: clientData.email,
         password: clientData.password
       })
+
+      console.log(response);
   }
 
   const focusInput = (id) => {
@@ -69,7 +71,7 @@ function Login() {
             <Input type="password" id="password" {...register("password")} error={errors.password?.message} />
             <Error>{errors.password?.message}</Error>
           </FormGroup>
-          <Button>Entrar</Button>
+          <Button type="submit" style={{marginTop: 5 , marginBottom: 20}}>Entrar</Button>
         </form>
         <LeftFooter>
           Não possui uma conta? <a onClick={signUp}>Cadastre-se</a>

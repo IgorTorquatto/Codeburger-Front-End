@@ -90,7 +90,6 @@ export const InputLabel = styled.p`
 
 `
  
-
 export const Input = styled.input`
     width: 100%;
     height: 39px;
@@ -111,25 +110,6 @@ export const Error = styled.p`
     margin-top: 2px;
 `
     
-export const Button = styled.button`
-    border: none;
-    outline: none;
-    color: #ffffff;
-    font-size: 1em;
-    background-color: #9758A6;
-    width: 30%;
-    height: 39px;
-    border-radius: 15px;
-    margin: 5px 0px 20px 0px;
-    align-self: center;
-
-    &:hover{
-        cursor: pointer;
-        opacity: 0.9;
-    }
-
-`
-
 export const LeftFooter = styled.p`
     color: #ffffff;
     margin-bottom: 60px;
