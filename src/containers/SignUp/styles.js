@@ -94,13 +94,19 @@ export const Input = styled.input`
     height: 39px;
     border-radius: 10px;
     outline: none;
-    border: none;
+    border: ${props => (props.error ? '2px solid #CC1717' : 'none')};
     box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
     font-size: 18px;
     font-weight: 300;
     line-height: 21px;
     padding: 15px;
 
+`
+
+export const Error = styled.p`
+    color: #CC1717;
+    font-size: 1.1em;
+    margin-top: 2px;
 `
 
 export const LeftFooter = styled.p`
