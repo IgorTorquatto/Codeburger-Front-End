@@ -1,15 +1,15 @@
-import React from 'react'
-import { ContainerButton } from './styles'
-import PropTypes from 'prop-types'
+import React from 'react';
+import { ContainerButton } from './styles';
+import PropTypes from 'prop-types';
 
-function Button({children, ...rest}) {
+const Button = ({ children, ...rest }) => {
   return (
     <ContainerButton {...rest}>{children}</ContainerButton>
-  )
-}
+  );
+};
 
-export default Button
+Button.propTypes = {
+  children: PropTypes.string,
+};
 
-Button.propTypes={
-    children: PropTypes.string
-}
+export default Button;
