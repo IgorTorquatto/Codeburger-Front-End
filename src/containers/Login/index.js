@@ -41,11 +41,11 @@ function Login() {
 
   const navigate = useNavigate()
 
-  const users = useUser()
-  console.log(users);
+  const { putUserData }= useUser()
+ 
   //Functions
   const onSubmit =  async clientData => {
-      const response = await toast.promise(
+      const { data } = await toast.promise(
         api.post('sessions',{
         email: clientData.email,
         password: clientData.password
@@ -56,8 +56,7 @@ function Login() {
         error: "Verifique seu e-mail e senha"
       }
     )
-
-      console.log(response);
+    putUserData(data)
   }
 
   const focusInput = (id) => {

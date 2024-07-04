@@ -1,14 +1,36 @@
-import React, { createContext, useContext } from 'react'
+import React, { createContext, useContext,useState,useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 const UserContext = createContext({})
 
 export const UserProvider = ({ children }) =>{
-    const user = { name: "Igor", age: 18}
-    const Otheruser = { name: "Renato", age: 18}
+    const [userData,setUserData] =  useState({})
+
+    const putUserData = async userInfo =>{
+        setUserData(userInfo)
+
+        await localStorage.setItem('codeburger:userData',JSON.stringify(userInfo))
+    }
+
+
+    
+    useEffect(()=>{
+        //asynchronous function to capture user information that is in localStorage
+        const loadUserData = async () =>{
+            const clientInfo = await localStorage.getItem('codeburger:userData')
+
+            //If there is already something in localstorage, store it in our state
+            if(clientInfo){
+                setUserData(JSON.parse(clientInfo))
+            }
+
+        }
+
+        loadUserData()
+    },[])
 
     return (
-        <UserContext.Provider value={{user,Otheruser}}>
+        <UserContext.Provider value={{putUserData,userData}}>
             {children}
         </UserContext.Provider>
     )
