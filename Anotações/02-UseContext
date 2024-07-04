@@ -1,0 +1,4 @@
+Geral:
+
+No UserProvider colocamos os dados que queremos expor para toda a nossa aplicação
+Dessa forma toda a aplicação pode acessar esses dados desde que estejam envolvidos pelo UserProvider em suas rotas ou componentes
