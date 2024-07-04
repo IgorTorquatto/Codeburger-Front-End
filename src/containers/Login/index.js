@@ -18,6 +18,7 @@ import * as Yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 import api from '../../services/api'
 import { toast } from 'react-toastify'
+import { useUser } from '../../hooks/UserContext';
 
 function Login() {
 
@@ -40,6 +41,8 @@ function Login() {
 
   const navigate = useNavigate()
 
+  const users = useUser()
+  console.log(users);
   //Functions
   const onSubmit =  async clientData => {
       const response = await toast.promise(
