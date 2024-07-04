@@ -77,7 +77,7 @@ function SignUp() {
   }
 
   const login = () => {
-    navigate('/')
+    navigate('/login')
   }
 
   return (
