@@ -39,9 +39,9 @@ function Login() {
     resolver: yupResolver(schema)
   })
 
-  const navigate = useNavigate()
+  const navigate = useNavigate() //useContext
 
-  const { putUserData }= useUser()
+  const { putUserData } = useUser()
  
   //Functions
   const onSubmit =  async clientData => {
@@ -57,6 +57,11 @@ function Login() {
       }
     )
     putUserData(data)
+
+    setTimeout(()=>{
+      navigate("/")
+    },1000)
+    
   }
 
   const focusInput = (id) => {
