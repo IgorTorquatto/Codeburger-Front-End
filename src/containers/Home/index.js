@@ -1,0 +1,15 @@
+import React from 'react'
+import { Container,HomeImg } from './styles'
+import HomeImage from '../../assets/Home_Img.svg'
+import CategoryCarousel from '../../components/CategoryCarousel'
+
+function index() {
+  return (
+    <Container>
+        <HomeImg src={HomeImage} alt="Home Image"/>
+        <CategoryCarousel/>
+    </Container>
+  )
+}
+
+export default index
