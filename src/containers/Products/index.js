@@ -1,10 +1,13 @@
 import React, { useState,useEffect }from 'react'
-import { Container,ProductsImg,CategoryButton,CategoriesMenu} from './styles'
+import { Container,ProductsImg,CategoryButton,CategoriesMenu,ProductsContainer} from './styles'
 import ProductsImage from '../../assets/products-image.svg'
 import api from '../../services/api'
+import CardProduct from '../../components/CardProduct'
+import formatCurrency from '../../utils/formatCurrency'
 
 function Products() {
   const [categories,setCategories] = useState([])
+  const [products,setProducts] = useState([])
   const [activeCategory,setActiveCategory] = useState(0)
 
   useEffect(()=>{
@@ -14,6 +17,18 @@ function Products() {
       const newCategories = [{id: 0, name: 'Todos'},...data]
       setCategories(newCategories)
     }
+
+    async function loadProducts(){
+      const { data } = await api.get('products')
+
+      const newData = data.map(product=>{
+        return { ...product, formatedPrice: formatCurrency(product.price)}
+      })
+      
+      setProducts(newData)
+    }
+
+    loadProducts()
     loadCategories()
   })
 
@@ -31,6 +46,12 @@ function Products() {
             </CategoryButton>
           ))}
         </CategoriesMenu>
+        <ProductsContainer>
+              {products && products.map(product=>(
+                 //sending product via props
+                <CardProduct key={product.id} product={product}/>
+              ))}
+        </ProductsContainer>
     </Container>
   )
 }
