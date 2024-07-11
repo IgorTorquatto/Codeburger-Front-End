@@ -3,6 +3,7 @@ import { Container,Title,ContainerItems,Image_Carousel,Button } from './styles'
 import Title_Offers from '../../assets/OFERTAS.png'
 import api from '../../services/api'
 import Carousel from 'react-elastic-carousel'
+import formatCurrency from '../../utils/formatCurrency'
 
 function OffersCarousel() {
   const [offers,setOffers] = useState([])
@@ -13,7 +14,9 @@ function OffersCarousel() {
 
         //we must use the filter method
         //returns only products with the "offer" field as true
-        const onlyOffers = data.filter(product => product.offer)
+        const onlyOffers = data.filter(product => product.offer).map(product =>{
+          return { ...product, formatedPrice: formatCurrency(product.price)}
+        })
 
         setOffers(onlyOffers)
     }
@@ -42,7 +45,7 @@ function OffersCarousel() {
               <ContainerItems key={product.id}>
                 <Image_Carousel src={product.url} alt="product photo"/>
                 <p>{product.name}</p>
-                <p>{product.price}</p>
+                <p>{product.formatedPrice}</p>
                 <Button>Peça agora</Button>
               </ContainerItems>
             ))

@@ -40,6 +40,7 @@ export const ContainerItems = styled.div`
     font-size: 1em;
     line-height: 120%;
     color: #424242;
+    align-self: center;
   }
 `
 
