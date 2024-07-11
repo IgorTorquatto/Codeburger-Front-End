@@ -4,6 +4,7 @@ import Login from '../containers/Login'
 import SignUp from '../containers/SignUp'
 import Home from '../containers/Home'
 import PrivateRoute from './private-route'
+import Products from '../containers/Products'
 
 function AppRoutes() {
     return (
@@ -11,7 +12,8 @@ function AppRoutes() {
             <Routes>
                 <Route path="/" element={<PrivateRoute element={Home} />} />
                 <Route path="/login" element={<Login />} />
-                <Route path="/signup" element={<SignUp />} />
+                <Route path="/cadastro" element={<SignUp />} />
+                <Route path="/produtos" element={<PrivateRoute element={Products} />} />
             </Routes>
         </BrowserRouter>
     )
