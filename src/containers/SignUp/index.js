@@ -10,7 +10,7 @@ import {
   LeftFooter,
   Error
 } from './styles';
-import Button from '../../components/Button'
+import { Button } from '../../components'
 import SignUpImg from '../../assets/8 1.svg';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
@@ -19,7 +19,7 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import api from '../../services/api'
 import { toast } from 'react-toastify'
 
-function SignUp() {
+export function SignUp() {
 
   //Variables
   const schema = Yup.object().shape({
@@ -138,5 +138,3 @@ function SignUp() {
     </Container>
   );
 }
-
-export default SignUp;

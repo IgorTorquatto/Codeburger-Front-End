@@ -10,7 +10,7 @@ import {
   LeftFooter,
   Error
 } from './styles';
-import Button from '../../components/Button'
+import { Button } from '../../components'
 import LoginImg from '../../assets/9 1.svg';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
@@ -20,7 +20,7 @@ import api from '../../services/api'
 import { toast } from 'react-toastify'
 import { useUser } from '../../hooks/UserContext';
 
-function Login() {
+export function Login() {
 
   //Variables
   const schema = Yup.object().shape({
@@ -117,5 +117,3 @@ function Login() {
     </Container>
   );
 }
-
-export default Login;

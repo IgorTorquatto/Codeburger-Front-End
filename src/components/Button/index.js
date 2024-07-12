@@ -2,7 +2,7 @@ import React from 'react';
 import { ContainerButton } from './styles';
 import PropTypes from 'prop-types';
 
-const Button = ({ children, ...rest }) => {
+export const Button = ({ children, ...rest }) => {
   return (
     <ContainerButton {...rest}>{children}</ContainerButton>
   );
@@ -11,5 +11,3 @@ const Button = ({ children, ...rest }) => {
 Button.propTypes = {
   children: PropTypes.string,
 };
-
-export default Button;

@@ -1,10 +1,9 @@
 import React from 'react'
 import { Container,HomeImg } from './styles'
 import HomeImage from '../../assets/Home_Img.svg'
-import CategoryCarousel from '../../components/CategoryCarousel'
-import OffersCarousel from '../../components/OffersCarousel'
+import { CategoryCarousel,OffersCarousel}from '../../components'
 
-function index() {
+export function Home() {
   return (
     <Container>
         <HomeImg src={HomeImage} alt="Home Image"/>
@@ -14,4 +13,3 @@ function index() {
   )
 }
 
-export default index

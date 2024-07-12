@@ -2,10 +2,10 @@ import React, { useState,useEffect }from 'react'
 import { Container,ProductsImg,CategoryButton,CategoriesMenu,ProductsContainer} from './styles'
 import ProductsImage from '../../assets/products-image.svg'
 import api from '../../services/api'
-import CardProduct from '../../components/CardProduct'
+import { CardProduct }from '../../components'
 import formatCurrency from '../../utils/formatCurrency'
 
-function Products() {
+export function Products() {
   const [categories,setCategories] = useState([])
   const [products,setProducts] = useState([])
   const [filteredProducts, setFilteredProducts] = useState([])
@@ -66,5 +66,3 @@ function Products() {
     </Container>
   )
 }
-
-export default Products
