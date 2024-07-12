@@ -1,6 +1,9 @@
 import styled from "styled-components"
 
-export const Container = styled.div``
+export const Container = styled.div`
+    min-height: 100vh;
+    background: #e5e5e5;
+`
 
 export const ProductsImg = styled.img`
     width:100%;
