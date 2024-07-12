@@ -1,11 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { UserProvider } from './UserContext'
+import { CartProvider } from './CartContext'
 
 function AppProvider({ children }) {
   return (
     <UserProvider>
-        { children }
+        <CartProvider>{children}</CartProvider>
     </UserProvider>
   )
 }
