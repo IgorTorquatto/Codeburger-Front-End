@@ -72,7 +72,7 @@ function Login() {
   }
 
   const signUp = () => {
-    navigate("/signup")
+    navigate("/cadastro")
   }
 
   return (
