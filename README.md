@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+# Codeburger-Front-End
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descrição
 
-## Available Scripts
+Este é o front-end do projeto Codeburger, uma aplicação de pedidos online para uma hamburgueria.
 
-In the project directory, you can run:
+## Pré-requisitos
 
-### `npm start`
+Antes de começar, certifique-se de ter o seguinte instalado em sua máquina:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Node.js](https://nodejs.org/en/)
+- [Yarn](https://classic.yarnpkg.com/en/docs/install)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Instalação
 
-### `npm test`
+Siga os passos abaixo para configurar e rodar o projeto localmente.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 1. Clone o repositório
 
-### `npm run build`
+```bash
+git clone https://github.com/IgorTorquatto/Codeburger-Front-End.git
+cd Codeburger-Front-End
+yarn install
+yarn start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 2. Instale as dependências
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+yarn install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 3. Execute a aplicação
 
-### `npm run eject`
+```bash
+yarn start
+```
+A aplicação estará disponível em http://localhost:3000
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Estrutura do Projeto
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Abaixo está a estrutura de diretórios do projeto:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Estrutura do Projeto
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Abaixo está a estrutura de diretórios do projeto com a descrição de cada pasta:
 
-## Learn More
+- `public/`: Contém os arquivos públicos da aplicação, como o `index.html`.
+- `src/`: Diretório principal do código fonte.
+  - `src/assets/`: Contém as imagens do aplicativo.
+  - `src/components/`: Contém os componentes reutilizáveis do React.
+  - `src/containers/`: Contém as páginas da aplicação.
+  - `src/hooks/`: Contém hooks de context.
+  - `src/routes/`: Contém os arquivos de configuração das rotas, como `routes.js` e `private-routes.js`.
+  - `src/services/`: Contém as configurações da API.
+  - `src/styles/`: Contém os estilos globais, como `globalStyles.js`.
+  - `src/utils/`: Contém funções úteis, como `formatCurrency`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `.gitignore`: Especifica os arquivos e diretórios que devem ser ignorados pelo Git.
+- `README.md`: Arquivo de documentação do projeto.
+- `package.json`: Contém as dependências e scripts do projeto.
+- `yarn.lock`: Arquivo que garante a consistência das dependências instaladas com o Yarn.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contribuindo
 
-### Code Splitting
+Para contribuir com este projeto, siga os passos abaixo:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Faça um fork do projeto.
+2.  Crie uma nova branch:
 
-### Analyzing the Bundle Size
+```bash
+git checkout -b feature/nova-feature
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. Commit suas mudanças
+   
+```bash
+git commit -am 'Adiciona nova feature'
+```
 
-### Making a Progressive Web App
+4. Envie para a branch
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+git push origin feature/nova-feature
+```
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+5. Abra um Pull Request
