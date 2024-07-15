@@ -14,7 +14,7 @@ export const Container = styled.div`
     grid-template-areas: 
     'title title'
     'items items-price'
-    'delivery-tax delivery-tax-price' ;
+    'delivery-tax-price delivery-tax ' ;
     grid-gap: 10px 50px;
 
       h2{
