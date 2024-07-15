@@ -30,6 +30,41 @@ export const CartProvider = ({ children }) => {
        await localStorage.setItem('codeburger:cartInfo', JSON.stringify(newCartProducts))
     }
 
+    const deleteProducts = async productId =>{
+        const newCart = cartProducts.filter( prodcut => prodcut.id !== productId)
+        setCartProducts(newCart)
+
+        await localStorage.setItem('codeburger:cartInfo', JSON.stringify(newCart))
+    }
+
+    const increaseProducts = async productId =>{
+        const newCart = cartProducts.map( product => {
+            return product.id === productId ? {...product, quantity: product.quantity + 1} : product
+        })
+        setCartProducts(newCart)
+
+        await localStorage.setItem('codeburger:cartInfo', JSON.stringify(newCart))
+    }
+
+    const decreaseProducts = async productId =>{
+
+        const cartIndex = cartProducts.findIndex(pdt => pdt.id === productId)
+
+        if( cartProducts[cartIndex].quantity > 1){
+            const newCart = cartProducts.map( product => {
+                return product.id === productId ? {...product, quantity: product.quantity - 1} : product
+            })
+            setCartProducts(newCart)
+            
+            await localStorage.setItem('codeburger:cartInfo', JSON.stringify(newCart))
+        }
+        
+        else{
+            deleteProducts(productId)
+        }
+        
+    }
+
     useEffect(() => {
         //save cart items to localstorage
         const loadUserData = async () => {
@@ -46,7 +81,7 @@ export const CartProvider = ({ children }) => {
 
     return (
         //everything that is placed in "value" is exported to be used elsewhere in our application
-        <CartContext.Provider value={{ putProductInCart, cartProducts }}>
+        <CartContext.Provider value={{ putProductInCart, cartProducts,increaseProducts,decreaseProducts }}>
             {children}
         </CartContext.Provider>
     )
