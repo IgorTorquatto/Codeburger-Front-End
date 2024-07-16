@@ -37,9 +37,27 @@ yarn start
 ```
 A aplicação estará disponível em http://localhost:3000
 
-## Estrutura do Projeto
+## Configuração do Backend
 
-Abaixo está a estrutura de diretórios do projeto:
+### 1. Clone o repositório  do backend
+
+```bash
+git clone https://github.com/IgorTorquatto/Codeburger-Back-End.git
+cd Codeburger-Back-End
+```
+
+### 2. Instale as dependências do backend
+
+```bash
+yarn install
+```
+### 3. Execute o backend
+
+```bash
+yarn dev
+```
+
+O backend estará disponível em http://localhost:3001
 
 ## Estrutura do Projeto
 
