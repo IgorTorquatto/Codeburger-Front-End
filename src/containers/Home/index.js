@@ -6,7 +6,6 @@ import { CategoryCarousel,OffersCarousel,Header }from '../../components'
 export function Home() {
   return (
     <Container>
-        <Header/>
         <HomeImg src={HomeImage} alt="Home Image"/>
         <CategoryCarousel/>
         <OffersCarousel/>

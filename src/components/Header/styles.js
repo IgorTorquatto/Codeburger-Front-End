@@ -29,9 +29,10 @@ export const ContainerRight = styled.div`
 export const PageLink = styled.a`
     cursor: pointer;
     text-decoration: none;
-    color: #555555;
+    color: ${ props => props.isActive ? '#9758a6' : '#555555'};
     font-size: 1.2em;
     line-height: 19px;
+    font-weight: bold;
 `
 export const ContainerUser = styled.div`
     display: flex;
