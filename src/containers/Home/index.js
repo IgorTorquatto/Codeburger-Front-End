@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container,HomeImg } from './styles'
 import HomeImage from '../../assets/Home_Img.svg'
-import { CategoryCarousel,OffersCarousel,Header }from '../../components'
+import { CategoryCarousel,OffersCarousel }from '../../components'
 
 export function Home() {
   return (

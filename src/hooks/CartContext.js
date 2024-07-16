@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
+import { toast } from 'react-toastify'
 
 const CartContext = createContext({})
 
@@ -31,7 +32,7 @@ export const CartProvider = ({ children }) => {
             newCartProducts = [...cartProducts,product] 
             setCartProducts(newCartProducts)
        }
-
+       await toast.success("Carrinho atualizado")
        updateLocalStorage(newCartProducts)
     }
 

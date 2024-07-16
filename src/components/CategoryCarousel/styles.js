@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Link } from "react-router-dom"
 
 export const Container = styled.div`
     background-color: #efefef;
@@ -35,7 +36,7 @@ export const ContainerItems = styled.div`
     flex-direction: column;
 `
 
-export const Button = styled.button`
+export const Button = styled(Link)`
     margin-top: 16px;
     background: #9758a6;
     border-radius: 8px;
