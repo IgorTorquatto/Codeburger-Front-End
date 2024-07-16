@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Home,Login,Products,SignUp,Cart } from '../containers'
+import { Home, Login, Products, SignUp, Cart, Admin, NotFound } from '../containers'
 import PrivateRoute from './private-route'
 
 function AppRoutes() {
@@ -12,6 +12,7 @@ function AppRoutes() {
                 <Route path="/cadastro" element={<SignUp />} />
                 <Route path="/produtos" element={<PrivateRoute element={Products} />} />
                 <Route path="/carrinho" element={<PrivateRoute element={Cart} />} />
+                <Route path="/pedidos" element={<PrivateRoute element={Admin} isAdmin={true}/>}/>
             </Routes>
         </BrowserRouter>
     )
