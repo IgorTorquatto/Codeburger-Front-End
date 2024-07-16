@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { Header } from '../components';
 
 function PrivateRoute({ element: Component, ...rest }) {
   const user = localStorage.getItem('codeburger:userData');
@@ -11,6 +12,7 @@ function PrivateRoute({ element: Component, ...rest }) {
 
   return (
     <>
+        <Header/>
         <Component {...rest} />
     </>
   );
