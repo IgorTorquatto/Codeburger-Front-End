@@ -1,12 +1,12 @@
 import React from 'react'
 import { Container } from './styles'
-import Orders from './Orders'
 
-export function Admin() {
+export function Orders() {
   return (
     <Container>
-        admin
-        <Orders/>
+        pedidos
     </Container>
   )
 }
+
+export default Orders
