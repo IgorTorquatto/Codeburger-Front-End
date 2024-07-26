@@ -10,6 +10,7 @@ Antes de começar, certifique-se de ter o seguinte instalado em sua máquina:
 
 - [Node.js](https://nodejs.org/en/)
 - [Yarn](https://classic.yarnpkg.com/en/docs/install)
+- [Docker](https://www.docker.com/)
 
 ## Instalação
 
@@ -19,9 +20,8 @@ Siga os passos abaixo para configurar e rodar o projeto localmente.
 
 ```bash
 git clone https://github.com/IgorTorquatto/Codeburger-Front-End.git
+
 cd Codeburger-Front-End
-yarn install
-yarn start
 ```
 
 ### 2. Instale as dependências
@@ -39,6 +39,8 @@ A aplicação estará disponível em http://localhost:3000
 
 ## Configuração do Backend
 
+Siga os passos abaixo para configurar e rodar o projeto localmente.
+
 ### 1. Clone o repositório  do backend
 
 ```bash
@@ -46,12 +48,20 @@ git clone https://github.com/IgorTorquatto/Codeburger-Back-End.git
 cd Codeburger-Back-End
 ```
 
-### 2. Instale as dependências do backend
+### 2. Crie os containers Docker
+
+```bash
+docker run --name codeburger -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
+
+docker run --name mongo -p 27017:27017 -d -t mongo
+```
+
+### 3. Instale as dependências do backend
 
 ```bash
 yarn install
 ```
-### 3. Execute o backend
+### 4. Execute o backend
 
 ```bash
 yarn dev
